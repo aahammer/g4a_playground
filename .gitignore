@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Remove CSS and JS since we're making simple HTML only
+styles.css
+script.js
+
+# Poetry (keep the lock file but ignore cache)
+.poetry/
