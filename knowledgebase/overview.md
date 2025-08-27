@@ -52,3 +52,13 @@ Triggers -> old Rules
 
 Add variables for clicks (all click variable)
 
+use the variables to e.g. narrow down the trigger 
+and to pass paramsters to google anlaytics
+
+google analyics has names you should use for cetain event parameters:
+e.g. 
+
+element_id → recommended parameter for click events.
+element_text → the text of the button/link.
+element_url → if it’s a link.
+element_classes → CSS classes.
