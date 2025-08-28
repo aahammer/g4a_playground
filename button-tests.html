@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5F42KL89');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Tests - G4A Playground</title>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5F42KL89"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <h1>Button Test Cases for GTM Variable</h1>
+    <p>This page tests various button configurations for the GTM click tracking variable.</p>
+    
+    <h2>Test Case 1: data-track attribute (highest priority)</h2>
+    <button data-track="custom-track-value">Button with data-track</button>
+    <br><br>
+    
+    <h2>Test Case 2: data-heap attribute (second priority)</h2>
+    <button data-heap="heap-identifier">Button with data-heap</button>
+    <br><br>
+    
+    <h2>Test Case 3: aria-label attribute (third priority)</h2>
+    <button aria-label="Accessible button label">Button with aria-label</button>
+    <br><br>
+    
+    <h2>Test Case 4: data-testid attribute (fourth priority)</h2>
+    <button data-testid="test-button-id">Button with data-testid</button>
+    <br><br>
+    
+    <h2>Test Case 5: innerText fallback (fifth priority)</h2>
+    <button>Simple button text</button>
+    <br><br>
+    
+    <h2>Test Case 6: Long text truncation (innerText > 50 chars)</h2>
+    <button>This is a very long button text that should be truncated at 50 characters to test the slice functionality</button>
+    <br><br>
+    
+    <h2>Test Case 7: Multiple attributes (should use highest priority)</h2>
+    <button data-track="priority-test" data-heap="should-be-ignored" aria-label="also-ignored">Multiple attributes button</button>
+    <br><br>
+    
+    <h2>Test Case 8: Links as clickable elements</h2>
+    <a href="#" data-track="link-track">Link with data-track</a><br>
+    <a href="#" aria-label="Link aria label">Link with aria-label</a><br>
+    <a href="#">Plain link text</a><br><br>
+    
+    <h2>Test Case 9: Nested elements inside buttons (closest() test)</h2>
+    <button data-track="nested-button">
+        <span>Click anywhere in this button</span>
+    </button>
+    <br><br>
+    
+    <button aria-label="Icon button">
+        <span>📋</span> Icon with text
+    </button>
+    <br><br>
+    
+    <button data-testid="complex-nested">
+        <div>
+            <span>Deeply nested</span>
+            <small>content</small>
+        </div>
+    </button>
+    <br><br>
+    
+    <h2>Test Case 10: Nested elements inside links</h2>
+    <a href="#" data-track="nested-link">
+        <strong>Bold text in link</strong>
+    </a>
+    <br><br>
+    
+    <a href="#" aria-label="Image link">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23ddd'/%3E%3C/svg%3E" alt="Test image">
+    </a>
+    <br><br>
+    
+    <h2>Test Case 11: Empty or whitespace text</h2>
+    <button data-track="empty-text-button">   </button>
+    <br><br>
+    
+    <button aria-label="Whitespace button">
+        
+    </button>
+    <br><br>
+    
+    <h2>Test Case 12: No trackable attributes (should return undefined)</h2>
+    <div>Not a button or link - should return undefined</div>
+    <br><br>
+    
+    <h2>Test Case 13: Complex nested scenario</h2>
+    <button data-heap="outer-button">
+        <div>
+            <span data-track="inner-span">Click on this span</span>
+            <p>Or this paragraph</p>
+        </div>
+    </button>
+    <br><br>
+    
+    <h2>Navigation</h2>
+    <p><a href="index.html"><button>Back to Home</button></a></p>
+    <p><a href="next.html"><button>Go to Next Page</button></a></p>
+</body>
+</html>

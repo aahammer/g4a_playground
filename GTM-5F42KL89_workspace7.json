@@ -1,0 +1,303 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2025-08-28 09:16:42",
+    "containerVersion": {
+        "path": "accounts/6307870301/containers/227111061/versions/0",
+        "accountId": "6307870301",
+        "containerId": "227111061",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6307870301/containers/227111061",
+            "accountId": "6307870301",
+            "containerId": "227111061",
+            "name": "aahammer.github.io",
+            "publicId": "GTM-5F42KL89",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1754943098006",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6307870301/containers/227111061/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-5F42KL89"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "tagId": "6",
+                "name": "g4a_playground_datastream",
+                "type": "googtag",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "tagId",
+                        "value": "{{g4a_measurement_id}}"
+                    }
+                ],
+                "fingerprint": "1756292640569",
+                "firingTriggerId": [
+                    "2147479573"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "tagId": "10",
+                "name": "click_button",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "element_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Click ID}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "element_text"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Click Text}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "data-track"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{data_track_attribute_auto}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "click_button"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{g4a_measurement_id}}"
+                    }
+                ],
+                "fingerprint": "1756298970692",
+                "firingTriggerId": [
+                    "9"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "triggerId": "9",
+                "name": "click_button",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "CSS_SELECTOR",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Element}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "button"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1756299255207"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "variableId": "7",
+                "name": "Google Tag Configuration Settings",
+                "type": "gtcs",
+                "fingerprint": "1754945322464"
+            },
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "variableId": "8",
+                "name": "g4a_measurement_id",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "G-144Z8RLZPV"
+                    }
+                ],
+                "fingerprint": "1756292599718",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "variableId": "12",
+                "name": "data_track_attribute_auto",
+                "type": "aev",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "varType",
+                        "value": "ATTRIBUTE"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "attribute",
+                        "value": "data-track"
+                    }
+                ],
+                "fingerprint": "1756298799366",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "type": "CLICK_CLASSES",
+                "name": "Click Classes"
+            },
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "type": "CLICK_ID",
+                "name": "Click ID"
+            },
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "type": "CLICK_TARGET",
+                "name": "Click Target"
+            },
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            },
+            {
+                "accountId": "6307870301",
+                "containerId": "227111061",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            }
+        ],
+        "fingerprint": "1756372602377",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6307870301/containers/227111061/versions/0?apiLink=version"
+    }
+}

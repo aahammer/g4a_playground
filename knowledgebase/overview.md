@@ -6,6 +6,8 @@ Collects only a small amount of default events
 [GA4 Automatically collected events](
 https://support.google.com/analytics/answer/9234069?hl=en)
 
+Account -> Property -> Datastream
+
 # Goolge Tag Manager
 
 Replaces the Analytics Installation Snippet
@@ -62,3 +64,34 @@ element_id → recommended parameter for click events.
 element_text → the text of the button/link.
 element_url → if it’s a link.
 element_classes → CSS classes.
+
+
+# GTM Promotion
+
+- Create **environments** (Dev → Staging → Prod).  
+- Always **create a version** and **publish first to Dev**.  
+- Once validated, **test and publish to Prod**.  
+
+## Workspaces
+- Use **per-feature workspaces** (short-lived, focused).  
+- Optionally keep **one generic tracking workspace** for global changes.  
+
+## GA4 Measurement ID Switching
+- **Use a GTM Lookup Table variable** (not custom JS).  
+- Configure a Lookup Table on `{{Page Hostname}}` → GA4 Measurement ID, e.g.:
+
+| Input (Hostname)     | Output (GA4 ID) |
+|-----------------------|-----------------|
+| `dev.example.com`     | `G-DEV123`      |
+| `staging.example.com` | `G-STG456`      |
+| `example.com`         | `G-PROD789`     |
+
+- Reference this variable in your GA4 tag’s **Measurement ID** field.  
+
+> ✅ This achieves the same as the code snippet but is **simpler, faster, and fully managed inside GTM**.
+
+
+# GTM Workspace External Git 
+
+GTM Workspaces can be acceses as pure code configs
+That allows for integration into CD/CI pipeliens and code review collabs beyond the gtm native versioning by  business / single users
